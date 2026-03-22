@@ -1,261 +1,380 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+  <title>Rein & Fein Niedersachsen | Professionelle Reinigungsdienstleistungen</title>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rein & Fein Niedersachsen</title>
+<meta name="description" content="Rein & Fein Niedersachsen — professionelle Reinigungsdienstleistungen für Privat- und Geschäftskunden in Niedersachsen.">
+<meta name="theme-color" content="#e2d4b6">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/png" href="assets/logo.png">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-<style>
-:root{
-  --beige:#e7dcc7;
-  --gold:#cbb892;
-  --black:#111;
-  --gray:#666;
-  --white:#fff;
-}
-
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Inter',sans-serif;
-}
-
-body{
-  background:#f8f6f2;
-  color:var(--black);
-}
-
-/* NAV */
-header{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:20px 10%;
-  background:rgba(255,255,255,0.9);
-  backdrop-filter:blur(10px);
-  position:sticky;
-  top:0;
-}
-
-header h1{
-  font-weight:700;
-}
-
-nav a{
-  margin-left:30px;
-  text-decoration:none;
-  color:var(--black);
-  font-weight:500;
-}
-
-nav a:hover{
-  color:var(--gold);
-}
-
-/* HERO */
-.hero{
-  height:90vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding:0 10%;
-}
-
-.hero h2{
-  font-size:50px;
-  margin-bottom:20px;
-}
-
-.hero p{
-  color:var(--gray);
-  margin-bottom:30px;
-}
-
-.btn{
-  padding:14px 30px;
-  border:none;
-  border-radius:30px;
-  background:var(--gold);
-  color:white;
-  font-weight:600;
-  cursor:pointer;
-  transition:0.3s;
-}
-
-.btn:hover{
-  transform:scale(1.05);
-}
-
-/* SECTION */
-section{
-  padding:80px 10%;
-}
-
-h3{
-  font-size:32px;
-  margin-bottom:30px;
-}
-
-/* SERVICES */
-.services{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:25px;
-}
-
-.card{
-  background:white;
-  padding:25px;
-  border-radius:15px;
-  transition:0.3s;
-}
-
-.card:hover{
-  transform:translateY(-8px);
-}
-
-.card h4{
-  margin-bottom:10px;
-}
-
-/* WHY */
-.why li{
-  margin-bottom:10px;
-  list-style:none;
-}
-
-.why li::before{
-  content:"✔ ";
-  color:var(--gold);
-}
-
-/* ABOUT */
-.about{
-  display:flex;
-  flex-wrap:wrap;
-  gap:40px;
-}
-
-.about div{
-  flex:1;
-}
-
-/* CONTACT */
-.contact{
-  background:var(--beige);
-  padding:40px;
-  border-radius:20px;
-  text-align:center;
-}
-
-.contact a{
-  display:inline-block;
-  margin-top:20px;
-  text-decoration:none;
-}
-
-/* FOOTER */
-footer{
-  text-align:center;
-  padding:20px;
-  font-size:14px;
-}
-</style>
 </head>
+<body data-page="home">
 
-<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="Rein & Fein Niedersachsen Startseite">
+      <img src="assets/logo.png" alt="Rein & Fein Niedersachsen Logo">
+      <span class="brand-copy">
+        <span class="brand-title">Rein &amp; Fein</span>
+        <span class="brand-subtitle">Niedersachsen</span>
+      </span>
+    </a>
 
-<header>
-  <h1>Rein & Fein</h1>
-  <nav>
-    <a href="#services">Leistungen</a>
-    <a href="#about">Über uns</a>
-    <a href="#contact">Kontakt</a>
-  </nav>
+    <button class="nav-toggle" aria-label="Navigation öffnen">
+      <span></span>
+    </button>
+
+    <nav class="site-nav" aria-label="Hauptnavigation">
+      <a href="index.html" data-page="home">Startseite</a>
+      <a href="leistungen.html" data-page="services">Leistungen</a>
+      <a href="ueber-uns.html" data-page="about">Über uns</a>
+      <a href="kontakt.html" data-page="contact">Kontakt</a>
+      <a href="impressum.html" data-page="legal">Impressum</a>
+    </nav>
+
+    <div class="header-actions">
+      <a class="btn btn-primary" href="mailto:reinundfeinniedersachsen@gmail.com?subject=Anfrage%20an%20Rein%20%26%20Fein%20Niedersachsen">Kontakt aufnehmen</a>
+    </div>
+  </div>
 </header>
 
-<section class="hero">
-  <div>
-    <h2>Sauberkeit, die überzeugt</h2>
-    <p>Professionelle Reinigungslösungen für höchste Ansprüche.</p>
 
-    <!-- EMAIL BUTTON -->
-    <a href="mailto:reinundfeinniedersachsen@gmail.com?subject=Anfrage%20Reinigung&body=Hallo,%20ich%20möchte%20mehr%20Informationen%20erhalten.">
-      <button class="btn">Kontakt aufnehmen</button>
-    </a>
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-panel reveal">
+          <div class="hero-pattern"></div>
+          <span class="eyebrow">Sauberkeit, die überzeugt</span>
+          <h1>Professionelle Reinigung für Privat &amp; Gewerbe.</h1>
+          <p class="lead">
+            Rein &amp; Fein Niedersachsen steht für gründliche, hygienische und
+            zuverlässige Reinigungsdienstleistungen mit transparenten Abläufen,
+            moderner Ausrüstung und flexiblen Einsatzzeiten.
+          </p>
 
-  </div>
-</section>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="mailto:reinundfeinniedersachsen@gmail.com?subject=Anfrage%20Reinigung&body=Hallo%20Rein%20%26%20Fein%20Niedersachsen,%0D%0A%0D%0Aich%20möchte%20gerne%20weitere%20Informationen%20zu%20Ihren%20Reinigungsdienstleistungen.">Kontakt aufnehmen</a>
+            <a class="btn btn-secondary" href="leistungen.html">Unsere Leistungen</a>
+          </div>
 
-<section id="services">
-  <h3>Unsere Leistungen</h3>
-  <div class="services">
+          <div class="hero-badges">
+            <div class="badge-box">
+              <strong>Schnell</strong>
+              <span>Schnelle Terminvergabe</span>
+            </div>
+            <div class="badge-box">
+              <strong>Flexibel</strong>
+              <span>Flexible Einsatzzeiten</span>
+            </div>
+            <div class="badge-box">
+              <strong>Nachhaltig</strong>
+              <span>Umweltfreundliche Reinigungsmittel</span>
+            </div>
+          </div>
 
-    <div class="card">
-      <h4>Büro & Praxisreinigung</h4>
-      <p>Saubere Arbeitsumgebungen für maximale Produktivität.</p>
+          <div class="hero-mini-grid">
+            <div class="hero-mini-card">
+              <strong>Transparente Preise</strong>
+              <p>Klare Kommunikation ohne versteckte Kosten.</p>
+            </div>
+            <div class="hero-mini-card">
+              <strong>Pünktlich &amp; professionell</strong>
+              <p>Verlässliche Durchführung mit hohen Qualitätsstandards.</p>
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero-aside reveal">
+          <div class="visual-card">
+            <img class="visual-card-logo" src="assets/logo.png" alt="Logo Rein & Fein Niedersachsen">
+            <div class="visual-content">
+              <h3>Ihr Partner für Sauberkeit &amp; Hygiene</h3>
+              <p>
+                Für gepflegte Räume, in denen sich Menschen wohlfühlen
+                und produktiv arbeiten können.
+              </p>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <div class="info-list">
+              <div class="info-item">
+                <div class="info-icon">01</div>
+                <div>
+                  <h4>Erfahrenes &amp; zuverlässiges Team</h4>
+                  <p>Geschultes Personal und strukturierte Arbeitsweise für konstant starke Ergebnisse.</p>
+                </div>
+              </div>
+              <div class="info-item">
+                <div class="info-icon">02</div>
+                <div>
+                  <h4>Individuelle Lösungen</h4>
+                  <p>Abgestimmte Reinigungskonzepte für Privatkunden, Büros, Praxen und Unternehmen.</p>
+                </div>
+              </div>
+              <div class="info-item">
+                <div class="info-icon">03</div>
+                <div>
+                  <h4>Höchste Hygienestandards</h4>
+                  <p>Gründliche, saubere und angenehme Räume mit Fokus auf Qualität und Nachhaltigkeit.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-top reveal">
+          <div>
+            <span class="eyebrow">Unternehmensprofil</span>
+            <h2>Warum Kunden uns wählen sollten</h2>
+          </div>
+          <p class="muted" style="max-width:52ch;">
+            Rein &amp; Fein Niedersachsen unterstützt Privat- und Geschäftskunden dabei,
+            hygienische, saubere und einladende Räume zu schaffen – zuverlässig, flexibel und professionell.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="feature-card reveal">
+            <h3>Qualität mit System</h3>
+            <p>
+              Wir arbeiten mit modernen Methoden, professioneller Ausrüstung und einem klaren Fokus auf
+              Gründlichkeit, Sauberkeit und Werterhalt Ihrer Flächen.
+            </p>
+            <ul>
+              <li>Saubere, hygienische und angenehme Räume</li>
+              <li>Konstante Qualitätsstandards</li>
+              <li>Sorgfältige Ausführung bis ins Detail</li>
+            </ul>
+          </article>
+
+          <article class="feature-card reveal">
+            <h3>Transparent &amp; fair</h3>
+            <p>
+              Eine gute Zusammenarbeit beginnt mit Klarheit. Deshalb setzen wir auf nachvollziehbare
+              Kommunikation, transparente Preise und verlässliche Terminabsprachen.
+            </p>
+            <ul>
+              <li>Keine versteckten Kosten</li>
+              <li>Klare Leistungsabsprachen</li>
+              <li>Strukturierte Planung</li>
+            </ul>
+          </article>
+
+          <article class="feature-card reveal">
+            <h3>Flexibel für Ihren Alltag</h3>
+            <p>
+              Ob private Räume, Büros oder gewerbliche Objekte: Wir orientieren uns an Ihren Anforderungen
+              und finden eine passende Lösung für Umfang, Zeitfenster und Turnus.
+            </p>
+            <ul>
+              <li>Flexible Einsatzzeiten</li>
+              <li>Passende Reinigungskonzepte</li>
+              <li>Zuverlässige Ausführung</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="highlight-block reveal">
+          <div class="highlight-grid">
+            <div>
+              <span class="eyebrow">Mission &amp; Vision</span>
+              <h2>Unser Anspruch ist Sauberkeit auf höchstem Niveau.</h2>
+              <p class="lead">
+                Unsere Mission ist es, Sauberkeit und Hygiene auf höchstem Niveau zu liefern.
+                Wir schaffen gepflegte Umgebungen, in denen sich Menschen wohlfühlen und produktiv arbeiten können.
+              </p>
+            </div>
+
+            <div class="number-list">
+              <div class="number-item">
+                <div class="number">01</div>
+                <div class="mission-box">
+                  <h3>Unsere Mission</h3>
+                  <p>
+                    Sauberkeit und Hygiene mit sichtbarer Qualität, professioneller Durchführung und
+                    verlässlicher Betreuung zu verbinden – für Privat- und Geschäftskunden in Niedersachsen.
+                  </p>
+                </div>
+              </div>
+
+              <div class="number-item">
+                <div class="number">02</div>
+                <div class="vision-box">
+                  <h3>Unsere Vision</h3>
+                  <p>
+                    Ein vertrauenswürdiger Partner für Reinigungsdienstleistungen in Niedersachsen zu sein –
+                    mit Qualität, Zuverlässigkeit und langfristiger Kundenzufriedenheit als Kern.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="stat-row" style="margin-top:28px;">
+          <div class="stat-card reveal">
+            <strong>Privat</strong>
+            <span>Individuelle Lösungen für private Haushalte</span>
+          </div>
+          <div class="stat-card reveal">
+            <strong>Gewerbe</strong>
+            <span>Reinigungsservices für Unternehmen und Büros</span>
+          </div>
+          <div class="stat-card reveal">
+            <strong>Hygiene</strong>
+            <span>Sauberkeit nach hohen Qualitätsstandards</span>
+          </div>
+          <div class="stat-card reveal">
+            <strong>Verlässlich</strong>
+            <span>Pünktliche, flexible und professionelle Ausführung</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-top reveal">
+          <div>
+            <span class="eyebrow">Leistungen auf einen Blick</span>
+            <h2>Gründliche Reinigung für unterschiedliche Anforderungen</h2>
+          </div>
+          <a class="btn btn-secondary" href="leistungen.html">Alle Leistungen ansehen</a>
+        </div>
+
+        <div class="grid-4">
+          <article class="service-card reveal">
+            <h3>Büro- &amp; Praxisreinigung</h3>
+            <p>Sauberkeit und Hygiene für produktive, gepflegte und repräsentative Arbeitsumgebungen.</p>
+            <div class="service-meta">
+              <span class="chip">Geschäftskunden</span>
+              <span class="chip">Regelmäßig</span>
+            </div>
+          </article>
+
+          <article class="service-card reveal">
+            <h3>Fensterreinigung</h3>
+            <p>Auf Anfrage und individuell abgestimmt für höchste Ansprüche und einen klaren Eindruck.</p>
+            <div class="service-meta">
+              <span class="chip">Auf Anfrage</span>
+              <span class="chip">Individuell</span>
+            </div>
+          </article>
+
+          <article class="service-card reveal">
+            <h3>Endreinigung</h3>
+            <p>Perfekte Sauberkeit bis ins Detail für Übergaben, Abschlüsse und anspruchsvolle Reinigungen.</p>
+            <div class="service-meta">
+              <span class="chip">Detailgenau</span>
+              <span class="chip">Gründlich</span>
+            </div>
+          </article>
+
+          <article class="service-card reveal">
+            <h3>Grundreinigung &amp; Bodenpflege</h3>
+            <p>Tiefenreinigung für maximale Hygiene und gepflegte Oberflächen mit professionellem Anspruch.</p>
+            <div class="service-meta">
+              <span class="chip">Tiefenreinigung</span>
+              <span class="chip">Pflege</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="cta-band reveal">
+          <div>
+            <h2>Jetzt unverbindlich Kontakt aufnehmen</h2>
+            <p>
+              Sie möchten ein individuelles Angebot oder haben Fragen zu unseren Reinigungsleistungen?
+              Schreiben Sie uns direkt per E-Mail – Ihr Mailprogramm öffnet sich sofort.
+            </p>
+          </div>
+          <a class="btn btn-primary" href="mailto:reinundfeinniedersachsen@gmail.com?subject=Unverbindliche%20Anfrage&body=Hallo%20Rein%20%26%20Fein%20Niedersachsen,%0D%0A%0D%0Aich%20interessiere%20mich%20für%20Ihre%20Dienstleistungen.">E-Mail starten</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="quote-box reveal center">
+          <blockquote>
+            „Vertrauen Sie auf unsere Erfahrung und unser Engagement für perfekte Ergebnisse.“
+          </blockquote>
+          <cite>Rein &amp; Fein Niedersachsen</cite>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="index.html">
+          <img src="assets/logo.png" alt="Rein & Fein Niedersachsen Logo">
+          <span class="brand-copy">
+            <span class="brand-title">Rein &amp; Fein</span>
+            <span class="brand-subtitle">Niedersachsen</span>
+          </span>
+        </a>
+        <p style="margin-top:16px;">
+          Professionelle Reinigungslösungen mit Fokus auf Qualität, Zuverlässigkeit,
+          Hygiene und langfristige Kundenzufriedenheit.
+        </p>
+      </div>
+
+      <div>
+        <h3>Navigation</h3>
+        <ul>
+          <li><a href="index.html">Startseite</a></li>
+          <li><a href="leistungen.html">Leistungen</a></li>
+          <li><a href="ueber-uns.html">Über uns</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h3>Kontakt</h3>
+        <ul>
+          <li>Rein &amp; Fein Niedersachsen</li>
+          <li>Hildesheimer Str. 82</li>
+          <li>30880 Laatzen</li>
+          <li><a href="tel:+4915757962457">0157 / 57962457</a></li>
+          <li><a href="mailto:reinundfeinniedersachsen@gmail.com">reinundfeinniedersachsen@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Rechtliches</h3>
+        <ul>
+          <li><a href="impressum.html">Impressum</a></li>
+          <li><a href="datenschutz.html">Datenschutz</a></li>
+        </ul>
+      </div>
     </div>
 
-    <div class="card">
-      <h4>Fensterreinigung</h4>
-      <p>Kristallklare Ergebnisse für Ihr Unternehmen.</p>
+    <div class="footer-bottom">
+      <small>© <span data-year></span> Rein &amp; Fein Niedersachsen. Alle Rechte vorbehalten.</small>
+      <small>Website für GitHub Pages optimiert.</small>
     </div>
-
-    <div class="card">
-      <h4>Endreinigung</h4>
-      <p>Perfekte Sauberkeit bis ins Detail.</p>
-    </div>
-
-    <div class="card">
-      <h4>Grundreinigung</h4>
-      <p>Tiefenreinigung für höchste Hygiene.</p>
-    </div>
-
   </div>
-</section>
-
-<section class="why">
-  <h3>Warum Sie uns wählen sollten</h3>
-  <ul>
-    <li>Erfahrenes & zuverlässiges Team</li>
-    <li>Individuelle Lösungen</li>
-    <li>Transparente Preise</li>
-    <li>Pünktlich & professionell</li>
-  </ul>
-</section>
-
-<section id="about" class="about">
-  <div>
-    <h3>Über Uns</h3>
-    <p>
-      Rein & Fein Niedersachsen steht für höchste Qualität in der Reinigung.
-      Unser Ziel ist es, hygienische und angenehme Räume zu schaffen.
-    </p>
-  </div>
-</section>
-
-<section id="contact">
-  <div class="contact">
-    <h3>Kontakt</h3>
-    <p>Rein & Fein Niedersachsen</p>
-    <p>Hildesheimer Str. 82</p>
-    <p>30880 Laatzen</p>
-    <p>📞 0157 57962457</p>
-
-    <!-- EMAIL LINK -->
-    <a href="mailto:reinundfeinniedersachsen@gmail.com">
-      <button class="btn">E-Mail senden</button>
-    </a>
-  </div>
-</section>
-
-<footer>
-  © 2026 Rein & Fein Niedersachsen
 </footer>
+<script src="script.js"></script>
 
 </body>
 </html>
